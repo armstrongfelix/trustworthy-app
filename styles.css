@@ -100,6 +100,7 @@ button {
   color: inherit;
   text-decoration: none;
   cursor: pointer;
+  font-size: inherit;
 }
 a:hover,
 button:hover {
@@ -119,6 +120,14 @@ button:active {
   grid-template-columns: 4fr 9fr;
 }
 
+@media (max-width: 1024px) {
+  .layout-container {
+    grid-template-columns: 1fr;
+    /* display: flex;
+    flex-direction: column; */
+  }
+}
+
 .side-bar {
   width: 100%;
   height: 100vh;
@@ -132,6 +141,22 @@ button:active {
   position: sticky;
   top: 0;
   z-index: 100;
+}
+
+@media (max-width: 1024px) {
+  .side-bar {
+    position: static;
+    height: fit-content;
+  }
+
+  .side-nav {
+    width: 100vw;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: var(--color-very-dark-green);
+    padding: var(--padding-sm);
+  }
 }
 
 .side-nav {
@@ -202,8 +227,82 @@ h1 span {
   color: rgb(171, 167, 167);
   line-height: 1.5;
 }
+
+.offerings-container {
+  display: flex;
+  flex-direction: column;
+  gap: var(--gap-md);
+}
+
+.offerings-container h3 {
+  color: var(--color-lemon);
+}
+
+.offerings {
+  display: flex;
+  gap: var(--gap-md);
+}
+
+.offering {
+  width: 125px;
+  height: 140px;
+  background-color: var(--color-dark-green);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: var(--gap-sm);
+  border-radius: var(--radius-sm);
+  color: var(--color-black);
+  font-weight: 500;
+  padding: 0 var(--padding-sm);
+}
+
+@media (max-width: 1024px) and (min-width: 480px) {
+  .offering {
+    width: 250px;
+  }
+}
+
+.offering:hover {
+  background-color: var(--color-lemon);
+  transition: backgrount-color 0.3s ease-in-out;
+}
+
+.offering:active {
+  background-color: var(--color-brownish-green);
+  transition: backgrount-color 0.5s ease-in-out;
+}
+
+.offering p {
+  text-align: center;
+}
+
+/* Sidebar Bottom Navigations */
+
+.sidebar-bottom-nav {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+}
+
+.sidebar-bottom-links {
+  list-style: none;
+  color: var(--color-lemon);
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  gap: var(--gap-md);
+  font-size: var(--font-md);
+}
+
+.sidebar-bottom-links a:hover {
+  border-bottom: 2px solid var(--color-lemon);
+  transition: border-bottom 0.2s ease-in-out;
+}
+
 .main-container {
   width: 100%;
-  height: 100vh;
-  border: 2px solid rgb(243, 247, 55);
+  height: 1000vh;
+  border: 10px solid rgb(41, 71, 223);
 }
