@@ -441,7 +441,7 @@ hr {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  gap: var(--gap-md);
+  gap: var(--gap-xxlg);
 }
 
 .get-more-done-header {
@@ -466,7 +466,41 @@ hr {
 .get-more {
   display: grid;
   grid-template-columns: 1fr 1fr;
+  justify-content: center;
+  align-items: center;
+  gap: var(--gap-lg);
+}
+
+@media (max-width: 768px) {
+  .get-more {
+    grid-template-columns: 1fr;
+    justify-content: center;
+    align-items: center;
+    gap: var(--gap-lg);
+  }
 }
 
 .get-more-card {
+  width: 320px;
+  height: 200px;
+  background-color: var(--color-lemon);
+  border: none;
+  border-radius: var(--radius-md);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: var(--gap-lg);
+  padding: var(--padding-md);
+}
+
+.double-prodctivity h3 {
+  text-align: center;
+  font-size: 4rem;
+  font-weight: 500;
+}
+
+.get-more-paragraph {
+  text-align: center;
+  font-size: var(--font-md);
 }
