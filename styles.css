@@ -16,6 +16,8 @@ body {
   width: 100%;
   background-color: var(--color-white);
   font-family: var(--font-manrope);
+  scroll-behavior: smooth;
+  transition: all 0.3s ease-in-out;
 }
 
 /* ROOT DEFINITIONS */
@@ -64,7 +66,7 @@ body {
   --radius-md: 10px;
   --radius-lg: 15px;
   --radius-xlg: 25px;
-  --circle: 100%;
+  --radius-circle: 50%;
 
   /* paddings */
   --padding-xsm: 5px;
@@ -87,6 +89,7 @@ body {
   --gap-md: 15px;
   --gap-lg: 25px;
   --gap-xlg: 50px;
+  --gap-xxlg: 70px;
 
   --box-shadow-sm: 0 0 2px #619111;
   --box-shadow-md: 0 0 5px #619111;
@@ -258,7 +261,7 @@ h1 span {
   padding: 0 var(--padding-sm);
 }
 
-@media (max-width: 1024px) and (min-width: 480px) {
+@media (max-width: 1024px) and (min-width: 768px) {
   .offering {
     width: 250px;
   }
@@ -303,6 +306,167 @@ h1 span {
 
 .main-container {
   width: 100%;
-  height: 1000vh;
-  border: 10px solid rgb(41, 71, 223);
+  display: flex;
+  flex-direction: column;
+  gap: 150px;
+  padding: var(--padding-xlg);
+}
+
+.hero-section {
+  display: flex;
+  flex-direction: column;
+  gap: var(--gap-xxlg);
+}
+
+.hero-screen-container {
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  justify-content: center;
+  gap: var(--gap-xlg);
+}
+
+.hero-screen {
+  width: 100%;
+  min-height: 60vh;
+  background-image: url("./images/him-smilling.jpeg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  border-radius: var(--radius-xlg);
+  position: relative;
+}
+
+.hero-screen div {
+  width: 160px;
+  height: 50px;
+  background-color: var(--color-dark-green);
+  border-radius: var(--radius-md);
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  padding: var(--padding-xsm);
+}
+
+#internet-card {
+  position: absolute;
+  top: 70px;
+  left: 50px;
+}
+
+#money-card {
+  position: absolute;
+  top: 30px;
+  right: 40px;
+}
+
+#payment-card {
+  position: absolute;
+  bottom: 60px;
+  left: 200px;
+}
+
+.span {
+  width: 30px;
+  height: 30px;
+  border-radius: var(--radius-circle);
+  background-color: var(--color-lemon);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 2px;
+}
+
+.hero-screen div p {
+  color: var(--color-white);
+  font-size: 0.9rem;
+}
+
+.hero-screen div p a:hover {
+  color: var(--color-lemon);
+}
+
+.hero-screen div p a:active {
+  color: var(--color-very-dark-green);
+}
+
+.hero-screen-container p {
+  color: var(--color-black);
+  text-align: center;
+  font-size: var(--font-lg);
+}
+
+.hero-nav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.hero-links {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: var(--gap-lg);
+  color: var(--color-dark-green);
+  font-size: var(--font-lg);
+  font-weight: 500;
+}
+
+.hero-link {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: var(--gap-xsm);
+}
+.hero-link a:hover {
+  color: var(--color-ash);
+}
+
+.hero-link a:active {
+  color: var(--color-very-dark-green);
+}
+
+hr {
+  width: 100%;
+  height: 0.5px;
+  background-color: rgba(133, 124, 124, 0.466);
+  border: none;
+}
+
+.get-more-done {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: var(--gap-md);
+}
+
+.get-more-done-header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: var(--gap-xsm);
+  color: var(--color-very-dark-green);
+}
+
+.get-more-done-header h2 {
+  font-size: 2.5rem;
+  font-weight: 500;
+}
+
+.get-more-done-header p {
+  font-size: var(--font-md);
+  text-align: center;
+}
+
+.get-more {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.get-more-card {
 }
