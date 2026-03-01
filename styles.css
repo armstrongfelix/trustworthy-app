@@ -626,13 +626,16 @@ h2 {
 }
 
 .footer {
+  margin-top: 100px;
   width: 100%;
-  display: flex;
-  flex-direction: column;
+  height: fit-content;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
   justify-content: center;
   align-items: start;
-  padding: var(--padding-xxl);
-  gap: 150px;
+  padding: 60px 50px 100px;
+  column-gap: 25%;
+  row-gap: 150px;
   background-color: #cbc9c965;
 }
 footer nav {
@@ -645,15 +648,10 @@ footer nav {
   display: flex;
   justify-content: start;
   align-items: center;
-  gap: 20vw;
 }
 
 footer ul {
   list-style: none;
-}
-
-.etran {
-  gap: 16vw;
 }
 
 footer a:hover {
