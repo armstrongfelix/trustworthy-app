@@ -633,9 +633,9 @@ h2 {
   grid-template-columns: repeat(2, 1fr);
   justify-content: center;
   align-items: start;
-  padding: 60px 50px 100px;
+  padding: 60px 50px 60px;
   column-gap: 25%;
-  row-gap: 150px;
+  row-gap: 100px;
   background-color: #cbc9c965;
 }
 footer nav {
@@ -656,4 +656,7 @@ footer ul {
 
 footer a:hover {
   color: #5d5d5d;
+}
+footer a:active {
+  color: var(--color-dark-green);
 }
